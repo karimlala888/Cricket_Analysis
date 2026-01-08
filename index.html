@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Karim Lala | Cricket Analyst</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(0,0,0,0.6);
+            max-width: 420px;
+            width: 100%;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.6);
+        }
+
+        h1 {
+            color: yellow;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        /* PROFILE IMAGE */
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            border: 4px solid #00c6ff;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(0,198,255,0.8);
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .timer {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .timer span {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #444;
+            padding: 8px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .badge strong {
+            color: red;
+        }
+
+        .btn {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            transition: 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,198,255,0.5);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(0,198,255,0.9);
+        }
+
+        .info p {
+            font-size: 14px;
+            margin: 6px 0;
+        }
+
+        /* FLOATING TELEGRAM */
+        .floating-telegram {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #0088cc;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 26px;
+            color: white;
+            text-decoration: none;
+            animation: pulse 1.5s infinite;
+            box-shadow: 0 0 20px rgba(0,136,204,0.8);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>KARIM LALA</h1>
+
+        <!-- PROFILE IMAGE -->
+        <div class="profile-img">
+            <img src="profile.jpeg" alt="Karim Lala">
+        </div>
+
+        <div class="timer">
+            Join Now <span id="countdown">20</span> Seconds Left
+        </div>
+
+        <div class="badge">
+            <strong>Top</strong> Accuracy
+        </div>
+
+        <p>Join and Watch Upcoming Tips 👇</p>
+
+        <!-- MAIN TELEGRAM BUTTON -->
+        <a class="btn" href="https://t.me/+53TBR08VaOcxN2Zl" target="_blank">
+            <i class="fab fa-telegram"></i>
+            JOIN KARIM LALA TELEGRAM
+        </a>
+
+        <div class="info">
+            <p>👑 KARIM LALA</p>
+            <p>🏏 Cricket Analysis Expert</p>
+            <p>🔥 Back To Back Winning Tips</p>
+            <p>🌍 International Match Coverage</p>
+        </div>
+    </div>
+</div>
+
+<!-- FLOATING TELEGRAM BUTTON -->
+<a href="https://t.me/+53TBR08VaOcxN2Zl" target="_blank" class="floating-telegram">
+    <i class="fab fa-telegram"></i>
+</a>
+
+<script>
+    let time = 20;
+    const countdown = document.getElementById("countdown");
+
+    setInterval(() => {
+        if (time > 0) {
+            time--;
+            countdown.innerText = time;
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
